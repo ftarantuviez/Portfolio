@@ -54,11 +54,13 @@ function About() {
             <div className="ballAbout" id="ba-6"></div>
             <div className="ballAbout" id="ba-7"></div>
         </div>
-        <div className="about__container">
+        <div className="about__container about__container3">
             <div className="about__video-container">
-                
+                <div className="about__video-container-gray">
+                    <div className="video"></div>
+                </div>
             </div>
-        </div>
+        </div> 
         </>
     )
 }
