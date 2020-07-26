@@ -1,0 +1,31 @@
+.background-darker{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    top: 0;
+}
+.carouselInner-image{
+    height: 100vh;
+}
+.carousel-caption{
+    top: 40%;
+}
+.captionImage{
+    width: 120px;
+    margin-bottom: 10px;
+    object-fit: contain;
+}
+.btn-primary
+{ 
+    background-color: #E5B34B;
+    border-color: #E5B34B;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:visited{
+    background-color: #cc9a2e !important;
+    border-color: #cc9a2e !important;
+}
+
+.btn-primary:focus{
+    box-shadow: 0 0 0 0.2rem rgba(229, 179, 79, .25) !important;
+}

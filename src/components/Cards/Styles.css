@@ -1,0 +1,103 @@
+.card-container{
+    position: relative;
+    min-height: 100vh;
+    background: #141414;
+    padding-top: 30px;
+}
+.card-container h4{
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+.cardProject{
+    width: 300px;
+    font-family: 'Josefin Sans', sans-serif;
+    height: 400px;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    transition: 0.5s;
+    margin: 20px;
+}
+.cardProject__front{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: .5s;
+}
+.cardProject__front img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.cardProject:hover .cardProject__front{
+    transform: rotateX(-180deg);
+}
+
+.cardProject__back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: .5s;
+}
+
+.cardProject__back::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.cardProject:hover .cardProject__back{
+    transform: rotateX(0deg);
+}
+
+.cardProject .cardProject__back-details{
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.cardProject__back-details h2{
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.cardProject__back-details p{
+    margin: 20px;
+    color: #dcdcdc;
+}
+
+.cardProject__back-details h2 span{
+    color: #a7a7a7;
+    font-size: 16px;
+}
+
+.cardProject__button{
+    margin-top: 10px;
+    margin-left: 7px;
+}
+
+
+.listOfCards-row{
+    margin-top: 50px;
+}

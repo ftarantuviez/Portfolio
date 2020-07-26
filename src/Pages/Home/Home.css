@@ -1,0 +1,185 @@
+.wrapperMain {
+    position: relative;
+    /* margin-top: 200vh; */
+    height: 200vh;
+    z-index: -1;
+    width: 100%;
+    /* margin: 0; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #000;
+  }
+.container-effect{
+  position: fixed;
+  top: 220px;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-effect{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../images/mainImage.jpg');
+  background-attachment: fixed;
+  clip-path: circle(0px at center)
+}
+.text__container {
+  margin-left: 75px;
+}
+.txt {
+  color: #e5b34b;
+  background: #000000;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  text-transform: uppercase;
+}
+.frontend-engineer {
+  color: white;
+  font-size: 23px;
+  letter-spacing: 2px;
+}
+.txt::before {
+  content: "Francisco Tarantuviez";
+  position: absolute;
+
+  filter: blur(0.8px);
+}
+.neon-wrapper {
+  display: inline-flex;
+  filter: brightness(100%);
+  overflow: hidden;
+}
+.gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 120%;
+  mix-blend-mode: multiply;
+}
+.dodge {
+  background: radial-gradient(circle, #eab952, #000000 35%) center / 25% 25%;
+  position: absolute;
+  top: -200%;
+  left: -300%;
+  right: 0;
+  bottom: 0;
+  mix-blend-mode: color-dodge;
+  animation: dodge-area 3s linear infinite;
+}
+@keyframes dodge-area {
+  to {
+    transform: translate(50%, 50%);
+  }
+}
+
+
+.skills-title-container{
+  display: flex;
+  padding: 0 100px;
+  height: 280px;
+  justify-content: space-between;
+  align-items: center;
+  color: #e5b34b;
+  background-color: #141414; 
+}
+
+.booksProjects-container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../../images/floor.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.booksProjects-book{
+  position: relative;
+  top: 0;
+  width: 300px;
+  height: 500px;
+  background: #fff;
+  transform: rotate(-37.5deg) skewX(10deg);
+  box-shadow: -35px 35px 50px rgba(0, 0, 0, 1);
+  transition: .5s;
+}
+.booksProjects-book:hover{
+  transform: rotate(-37.5deg) skewX(10deg) translate(20px, -20px);
+  box-shadow: -50px 50px 100px rgba(0, 0, 0, 1);
+}
+.booksProjects-book:before{
+  content: '';
+  width: 30px;
+  height: 100%;
+  background: url('../../images/bg.jpg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: skewY(-45deg) translate(-30px, -15px);
+  box-shadow: inset -10px 0 20px rgba(0, 0, 0, .2);
+}
+.booksProjects-book:after{
+  content: '';
+  width: 100%;
+  height: 30px;
+  background: #ccc;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: skewX(-45deg) translate(15px, 30px);
+}
+
+.booksProjects-book h2{
+  position: absolute;
+  bottom: 80px;
+  left: 20px;
+  font-weight: 700;
+  font-size: 4em;
+  line-height: 76px;
+  color: #fff;
+}
+
+.booksProjects-book h2 span{
+  background: url('../../images/bg.jpg');
+  background-attachment: fixed;
+  font-size: 70px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.book-credits{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: #262626;
+  font-size: .6em;
+  padding-top: 5px;
+  font-weight: 500;
+  border-top-left-radius: 1px solid #262626;
+
+}
+
+.book-credits i{
+  font-weight: 700;
+}
+
+.book-cover{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-image: url('../../images/bg.jpg');
+  background-size: cover;
+  
+}

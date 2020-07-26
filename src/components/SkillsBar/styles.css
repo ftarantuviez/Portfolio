@@ -1,0 +1,402 @@
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+body,
+macbook,
+p,
+blockquote,
+fieldset,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML ELEMENTS */
+
+h1 {
+  font: bold 50px Helvetica, Arial, Sans-serif;
+  text-align: center;
+  color: #eee;
+  text-shadow: 0px 2px 6px #333;
+}
+h1 small {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 14px;
+  display: block;
+  color: #ccc;
+  margin-top: 10px;
+}
+h2 a {
+  display: block;
+  text-decoration: none;
+  margin: 0 0 30px 0;
+  font: italic 40px Georgia, Times, Serif;
+  text-align: center;
+  color: #bfe1f1;
+  text-shadow: 0px 2px 6px #333;
+}
+h2 a:hover {
+  color: #90bcd0;
+}
+
+/* COMMON CLASSES */
+.break {
+  clear: both;
+}
+
+/* WRAPPER */
+#wrapper {
+  width: 800px;
+  background: transparent radial-gradient(closest-side at 50% 50%, #6e6363 0%, #141414 100%) 0% 0% no-repeat padding-box;
+}
+
+/* CONTENT */
+#content {
+}
+#content h2 {
+  font: bold 30px Helvetica, Arial, Sans-serif;
+  color: #eee;
+  text-shadow: 0px 2px 6px #333;
+  margin-left: 400px;
+  padding-top: 20px;
+}
+
+/* BAR CHART */
+#bar {
+  list-style: none;
+}
+#bar li {
+}
+
+/* Last bottom should have a shadow */
+#bar li div.bottom,
+#bar li div.activeBottom {
+  -moz-box-shadow: 0 10px 10px hsla(0, 0%, 0%, 0.2);
+  -webkit-box-shadow: 0 10px 30px hsla(0, 0%, 0%, 0.2);
+  box-shadow: 0 10px 30px hsla(0, 0%, 0%, 0.2);
+}
+
+/* Ellipse top */
+#bar li div.top,
+#bar li div.activeTop {
+  background-color: rgba(213, 238, 241, 0.5);
+  position: relative;
+  float: left;
+  margin-left: 10px;
+  width: 40px;
+  height: 100px;
+  -moz-border-radius: 40px/100px;
+  -webkit-border-radius: 40px 100px;
+  border-radius: 40px/100px;
+  -webkit-transition-property: margin-left;
+  -webkit-transition-duration: 600ms;
+}
+#bar li div.top img,
+#bar li div.activeTop img {
+  margin-top: 15px;
+}
+
+/* Bar bottom */
+#bar li div.bottom,
+#bar li div.activeBottom {
+  position: relative;
+  width: 50px;
+  height: 100px;
+  -moz-border-radius: 40px/100px;
+  -webkit-border-radius: 40px 100px;
+  border-radius: 40px/100px;
+  background: -moz-linear-gradient(-90deg, #97a7a9, #b8cbcd);
+  background: -webkit-gradient(
+    linear,
+    0 top,
+    0 bottom,
+    from(#97a7a9),
+    to(#b8cbcd)
+  );
+  -webkit-transition-property: width;
+  -webkit-transition-duration: 600ms;
+}
+#bar li div.bottom div.infobox,
+#bar li div.activeBottom div.infobox {
+  padding: 30px;
+  padding-left: calc(100vw - 140px);
+  -webkit-transition-property: color;
+  -webkit-transition-duration: 500ms;
+}
+#bar li div.bottom div.infobox h3,
+#bar li div.activeBottom div.infobox h3 {
+  font-family: Georgia, serif, Times;
+}
+#bar li div.bottom div.infobox p,
+#bar li div.activeBottom div.infobox p {
+  font-family: "Lucida Grande", Arial, Helvetica, Sans-Serif;
+  opacity: 0;
+  -webkit-transition-property: opacity;
+  -webkit-transition-duration: 500ms;
+}
+
+/* General hover actions */
+#bar li:hover div.bottom div.infobox,
+#bar li div.activeBottom div.infobox {
+  color: #eee;
+  text-shadow: 0px 5px 5px #111;
+}
+#bar li:hover div.bottom div.infobox p,
+#bar li div.activeBottom div.infobox p {
+  opacity: 1;
+}
+
+/* React bar */
+#react div.top {
+  z-index: 99;
+}
+#react div.bottom {
+  z-index: 98;
+  height: 150px;
+}
+#react:hover div.top,
+#react:read-only div.activeTop {
+  z-index: 999;
+  background-color: #7099ab;
+  margin-left: calc(86.6vw - 100px);
+}
+#react:hover div.bottom,
+#react:read-only div.activeBottom {
+  z-index: 998;
+  background-color: #1a6c90;
+  width: calc(86.6vw - 60px);
+  background: -moz-linear-gradient(-90deg, #1a6c90, #14506b);
+  background: -webkit-gradient(
+    linear,
+    0 top,
+    0 bottom,
+    from(#61dafb),
+    to(#2e7290)
+  );
+}
+
+
+
+/* HTML & CSS bar */
+#htmlCss div.top {
+  z-index: 97;
+}
+#htmlCss div.bottom {
+  z-index: 96;
+  height: 200px;
+}
+#htmlCss:hover div.top,
+#htmlCss:read-only div.activeTop {
+  z-index: 997;
+  background-color: #bc003c;
+  margin-left: calc(92.8vw - 100px);
+}
+#htmlCss:hover div.bottom,
+#htmlCss:read-only div.activeBottom {
+  z-index: 996;
+  background-color: #9d0032;
+  width: calc(92.8vw - 60px);
+  background: -moz-linear-gradient(-90deg, #9d0032, #7a0027);
+  background: -webkit-gradient(
+    linear,
+    0 top,
+    0 bottom,
+    from(#9d0032),
+    to(#7a0027)
+  );
+}
+
+#htmlCss h3 {
+  width: 100px;
+}
+
+
+/* JavaScript bar */
+#javascript div.top {
+  z-index: 95;
+}
+#javascript div.bottom {
+  z-index: 94;
+  height: 250px;
+}
+#javascript:hover div.top,
+#javascript:read-only div.activeTop {
+  z-index: 995;
+  background-color: #d98f23;
+  margin-left: calc(84vw - 100px);
+}
+#javascript:hover div.bottom,
+#javascript:read-only div.activeBottom {
+  z-index: 994;
+  background-color: #b6781e;
+  width: calc(84vw - 60px);
+  background: -moz-linear-gradient(-90deg, #b6781e, #916018);
+  background: -webkit-gradient(
+    linear,
+    0 top,
+    0 bottom,
+    from(#f0d91d),
+    to(#e29c34)
+  );
+}
+
+/* Adobe XD bar */
+#adobexd div.top {
+  z-index: 93;
+}
+#adobexd div.bottom {
+  z-index: 92;
+  height: 100px;
+}
+#adobexd:hover div.top,
+#adobexd:read-only div.activeTop {
+  z-index: 993;
+  background-color: #3f1150;
+  margin-left: calc(66.3vw - 100px);
+}
+#adobexd:hover div.bottom,
+#adobexd:read-only div.activeBottom {
+  z-index: 992;
+  background-color: #698d54;
+  width: calc(66.3vw - 60px);
+  background: -moz-linear-gradient(-90deg, #698d54, #506b40);
+  background: -webkit-gradient(
+    linear,
+    0 top,
+    0 bottom,
+    from(#340e43),
+    to(#1a0721)
+  );
+}
+
+/* Swift bar */
+#swift div.top {
+  z-index: 91;
+}
+#swift div.bottom {
+  z-index: 90;
+  height: 120px;
+}
+#swift:hover div.top,
+#swift:read-only div.activeTop {
+  z-index: 991;
+  background-color: #dbdcd4;
+  margin-left: calc(44.2vw - 100px);
+}
+#swift:hover div.bottom,
+#swift:read-only div.activeBottom {
+  z-index: 990;
+  background-color: #340e43;
+  width: calc(44.2vw - 60px);
+  background: -moz-linear-gradient(-90deg, #340e43, #1a0721);
+  background: -webkit-gradient(
+    linear,
+    0 top,
+    0 bottom,
+    from(#fff8f4),
+    to(#9e9b93)
+  );
+}
+
+@media screen and (min-width: 320px) {
+  #wrapper {
+    width: auto;
+  }
+  #bar li div.bottom div.infobox,
+  #bar li div.activeBottom div.infobox {
+    font-size: 11px;
+    text-align: justify;
+    padding-left: calc(100vw - 90px);
+  }
+  #bar li div.bottom div.infobox h3,
+  #bar li div.activeBottom div.infobox h3 {
+    font-size: 14px;
+  }
+  #bar li {
+    margin-bottom: 0;
+  }
+
+  #react:hover div.top,
+  #react:read-only div.activeTop {
+    margin-left: calc(86.6vw - 135px);
+  }
+
+  #react:hover div.bottom,
+  #react:read-only div.activeBottom {
+    width: calc(86.6vw - 95px);
+  }
+
+  #htmlCss:hover div.top,
+  #htmlCss:read-only div.activeTop {
+    margin-left: calc(92.8vw - 135px);
+  }
+
+  #htmlCss:hover div.bottom,
+  #htmlCss:read-only div.activeBottom {
+    width: calc(92.8vw - 95px);
+  }
+
+  #javascript:hover div.top,
+  #javascript:read-only div.activeTop {
+    margin-left: calc(84vw - 135px);
+  }
+
+  #javascript:hover div.bottom,
+  #javascript:read-only div.activeBottom {
+    width: calc(84vw - 95px);
+  }
+
+  #swift:hover div.top,
+  #swift:read-only div.activeTop {
+    margin-left: calc(60vw - 135px);
+  }
+
+  #swift:hover div.bottom,
+  #swift:read-only div.activeBottom {
+    width: calc(60vw - 95px);
+  }
+
+  #adobexd:hover div.top,
+  #adobexd:read-only div.activeTop {
+    margin-left: calc(74.8vw - 135px);
+  }
+
+  #adobexd:hover div.bottom,
+  #adobexd:read-only div.activeBottom {
+    width: calc(74.8vw - 95px);
+  }
+}
+
+@media screen and (min-width: 424px) {
+  #bar li div.bottom div.infobox,
+  #bar li div.activeBottom div.infobox {
+    padding-left: calc(100vw - 110px);
+  }
+}
+
+@media screen and (min-width: 767px) {
+  #bar li {
+    margin-bottom: 0;
+  }
+  #bar li div.bottom div.infobox,
+  #bar li div.activeBottom div.infobox {
+    font-size: 12px;
+    text-align: justify;
+    padding-left: calc(100vw - 150px);
+  }
+  #bar li div.bottom div.infobox h3,
+  #bar li div.activeBottom div.infobox h3 {
+    font-size: 20px;
+  }
+}
+
+

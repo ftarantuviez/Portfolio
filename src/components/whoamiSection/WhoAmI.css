@@ -1,0 +1,146 @@
+#whoami{
+  height: 200vh;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  background-color: #e5b34b;
+  display: flex;
+  padding: 50px 170px;
+  padding-top: 130px;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.whoami__description{
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px 40px;
+}
+
+.whoami__cardsContainer{
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1100px;
+}
+
+.card{
+  width: 320px;
+  margin: 20px;
+  padding: 40px 30px;
+  border-radius: 40px;
+  background-color: #e5b34b;
+  box-shadow: -6px -6px 20px rgba(243, 193, 91, 1),
+              6px 6px 20px rgba(0, 0, 0, .1);
+}
+
+.card:hover{
+  box-shadow: inset -6px -6px 20px rgba(243, 193, 91, .5),
+              inset 6px 6px 20px rgba(0, 0, 0, .05);
+}
+
+.card__image{
+  position: relative;
+  text-align: center;
+}
+
+.card__image img{
+  max-width: 120px;
+}
+
+.card__content{
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.card__content h2{
+  color: #272525;
+  font-weight: 700;
+  font-size: 1.4em;
+  letter-spacing: 2px;
+}
+
+.card__content p {
+  color: #272525;
+}
+
+.card__readMore{
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  margin-top: 15px;
+  border-radius: 40px;
+  color: #272525;
+  font-size: 16px;
+  text-decoration: none;
+  box-shadow: -4px -4px 15px rgba(243, 193, 91, 1),
+               4px 4px 15px rgba(0, 0, 0, .1);
+}
+
+.card__readMore:hover{
+  box-shadow: inset -4px -4px 10px rgba(243, 193, 91, .5),
+              inset 4px 4px 10px rgba(0, 0, 0, .1);
+  color:#383636;
+}
+.card__readMore:hover span{
+  display: block;
+  transform: scale(.98);
+}
+
+.whoami__cardsContainer .card:hover .card__image,
+.whoami__cardsContainer .card:hover .card__content{
+  transform: scale(.98);
+}
+
+
+
+.stick{
+  position: absolute;
+  height: 200px;
+  width: 9px;
+  border-radius: 10px;
+  z-index: 100;
+}
+.gold{
+  background: #e5b34b;
+}
+.black{
+  background: #000;
+}
+
+#g-1{
+  left: 30px;
+  height: 120vh;
+  bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#g-2{
+  left: 90px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+  height: 18vh;
+  top: 200vh;
+}
+#b-1{
+  left: 30px;
+  height: 65vh;
+  top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#b-2{
+  left: 60px;
+  height: 85vh;
+  top: 190px;
+}
+#b-3{
+  left: 90px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 113vh;
+  top: 544px;
+}
