@@ -50,7 +50,7 @@
 }
 .about__video-container{
     position: absolute;
-    padding: 100px;
+    padding: 80px;
     top: 73px;
     width: 80%;
     height: 500px;
@@ -61,16 +61,147 @@
 .about__video-container-gray{
     width: 100%;
     height: 100%;
-    background: gray;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.video{
-    width: 90%;
-    height: 90%;
-    background: black;
+
+
+.about__container4{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.card-hobbie{
+    position: relative;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    width: 45%;
+    margin: 30px 0;
+    color: black;
+}
+
+.card-hobbie .imgBx-hobbie{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.card-hobbie:hover .imgBx-hobbie{
+    width: 150px;
+    height: 150px;
+    left: -75px;
+    top: calc(50% - 75px);
+    transition: .5s ease-in-out;
+    background: #ff0057;   
+}
+
+.card-hobbie .imgBx-hobbie:before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 6em;
+    color: rgba(255, 255, 255, .05);
+    font-weight: 700;
+}
+
+.card-hobbie .imgBx-hobbie svg{
+    max-width: 100px;
+    transition: .5s ease-in-out;
+    color: white !important;
+}
+
+.card-hobbie:hover .imgBx-hobbie svg {
+    max-width: 75px;
+}
+
+.card-hobbie .content-cardHobbie{
+    position: absolute;
+    right: 0;
+    width: calc(100% - 75px);
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-hobbie .content-cardHobbie h3{
+    margin-bottom: 5px;
+    font-size: 27px;
+    font-weight: 500;
+}
+
+.card-hobbie .content-cardHobbie a{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    background: #333;
+
+}
+
+@media (max-width: 992px){
+    .about__container4{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        padding-top: 190px;
+    }
+    .card-hobbie{
+        width: 400px;
+    }
+}
+
+@media (max-width: 768px){
+    .card-hobbie{
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+
+    }
+    .card-hobbie .imgBx-hobbie{
+        position: relative;
+        
+    }
+    .card-hobbie .imgBx-hobbie,
+    .card-hobbie:hover .imgBx-hobbie{
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+
+    .card-hobbie .imgBx-hobbie svg,
+    .card-hobbie:hover .imgBx-hobbie svg{
+        max-width: 100px;
+    }
+
+    .card-hobbie .content-cardHobbie{
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    } 
 }
 
 

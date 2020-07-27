@@ -30,9 +30,7 @@ function WhoAmI() {
                 {CardGenerator('Launch', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis magni maxime dicta perferendis excepturi maiores earum, aut unde fuga optio, labore nemo reiciendis incidunt ratione dolorum porro voluptates velit officiis!', photo, '#')}
             </div>
 
-            <div className="stick black" id="b-1"></div>
-            <div className="stick black" id="b-2"></div>
-            <div className="stick black" id="b-3"></div>
+            
             <div className="stick gold" id="g-2"></div>
         </div>
     )

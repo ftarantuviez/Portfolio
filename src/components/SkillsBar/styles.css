@@ -57,6 +57,9 @@ h2 a:hover {
 #wrapper {
   width: 800px;
   background: transparent radial-gradient(closest-side at 50% 50%, #6e6363 0%, #141414 100%) 0% 0% no-repeat padding-box;
+  padding: 60px;
+  padding-left: 10px;
+  padding-top: 0;
 }
 
 /* CONTENT */
@@ -249,6 +252,10 @@ h2 a:hover {
   );
 }
 
+#javascript h3{
+  font-size: 17px;
+}
+
 /* Adobe XD bar */
 #adobexd div.top {
   z-index: 93;
@@ -305,6 +312,11 @@ h2 a:hover {
     from(#fff8f4),
     to(#9e9b93)
   );
+}
+
+.buttonSkills{
+
+  width: 150px;
 }
 
 @media screen and (min-width: 320px) {
@@ -384,6 +396,10 @@ h2 a:hover {
 }
 
 @media screen and (min-width: 767px) {
+  #wrapper{
+    padding-left: 60px;
+  }
+  
   #bar li {
     margin-bottom: 0;
   }
@@ -395,7 +411,7 @@ h2 a:hover {
   }
   #bar li div.bottom div.infobox h3,
   #bar li div.activeBottom div.infobox h3 {
-    font-size: 20px;
+    font-size: 17px;
   }
 }
 

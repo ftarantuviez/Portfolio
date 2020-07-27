@@ -67,8 +67,8 @@ class Home extends Component{
                 
                     <div className="booksProjects-book">
                         <div className="book-cover"></div>
-                        <h2>Projects <span>Book</span> </h2>
-                        <div className="book-credits">"Written" By <span><i>Francisco Tarantuviez</i></span></div>
+                      <h2>Projects <span>Book</span> </h2>
+                        <div className="book-credits">Written By <span><i>Francisco Tarantuviez</i></span></div>
                     </div>
                 
                 </Link>

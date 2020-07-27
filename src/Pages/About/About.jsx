@@ -1,8 +1,33 @@
 import React from 'react'
 import './About.css'
 import me from '../../images/me.jpg'
+import Icon from 'react-icons-kit'
+import {books} from 'react-icons-kit/icomoon/books'
+import {ic_computer} from 'react-icons-kit/md/ic_computer'
+import {iosFootball} from 'react-icons-kit/ionicons/iosFootball'
+import {iosFlask} from 'react-icons-kit/ionicons/iosFlask'
+import {law} from 'react-icons-kit/oct/law'
+import {u1F4C8 as trendBusiness} from 'react-icons-kit/noto_emoji_regular/u1F4C8'
 
 function About() {
+
+    const cardHobbie = (dataTextHobbie, iconHobbie, descriptionHobbie, buttonHobbie) => {
+        return(
+            <div className="card-hobbie">
+                <div className="imgBx-hobbie" data-text={dataTextHobbie} >
+                    <Icon icon={iconHobbie} size={130} />
+                </div>
+                <div className="content-cardHobbie">
+                    <div>
+                        <h3>{dataTextHobbie}</h3>
+                        <p>{descriptionHobbie}</p>
+                        <a href="#" className="readMore-about">{buttonHobbie}</a>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+
     return (
         <>
         <div className="about__container about__container2">
@@ -57,10 +82,20 @@ function About() {
         <div className="about__container about__container3">
             <div className="about__video-container">
                 <div className="about__video-container-gray">
-                    <div className="video"></div>
+                    
                 </div>
             </div>
         </div> 
+
+        <div className="about__container about__container4">
+            <h2>Hobbies</h2>
+            {cardHobbie("Read", books, "Here is an little description about the hobbie wich Im talking right now so here is reading", "Recommend book")}
+            {cardHobbie("Code", ic_computer, "Here is an little description about the hobbie wich Im talking right now so here is reading", "Code together")}
+            {cardHobbie("Sports", iosFootball, "Here is an little description about the hobbie wich Im talking right now so here is reading", "Favorite sport?")}
+            {cardHobbie("Science", iosFlask, "Here is an little description about the hobbie wich Im talking right now so here is reading", "Science news?")}
+            {cardHobbie("Law", law, "Here is an little description about the hobbie wich Im talking right now so here is reading", "Do you like law?")}
+            {cardHobbie("Business", trendBusiness, "Here is an little description about the hobbie wich Im talking right now so here is reading", "Do you invest?")}
+        </div>
         </>
     )
 }

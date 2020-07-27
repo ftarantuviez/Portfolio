@@ -20,8 +20,9 @@ export const SkillsBar = () => {
       setTopOn('top')
       setButtonText('See all')
     }
-  }
+  } 
   return (
+    <>
     <div id="wrapper">
       <div id="content">
         <ul id="bar">
@@ -84,8 +85,10 @@ export const SkillsBar = () => {
           </li> 
         </ul>
       </div>
-
-      <button onClick={handleClick} className="mt-3 btn btn-primary">{buttonText}</button> 
     </div>
+    <div className="fluid-container d-flex justify-content-center align-items-center p-3" style={{background: '#141414'}}>
+      <button onClick={handleClick} className="btn btn-primary buttonSkills">{buttonText}</button> 
+    </div>
+    </>
   );
 };
