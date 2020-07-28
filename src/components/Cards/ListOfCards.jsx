@@ -4,10 +4,10 @@ import './Styles.css'
 import iphone from '../../images/iphone.png'
 import mac from '../../images/mac.png'
 
-function ListOfCards() {
+function ListOfCards(props) {
     return (
         <div className="container card-container">
-            <h4>Complex projects</h4>
+            <h4>{props.titleLevelProjects}</h4>
             <div className="row listOfCards-row">
                 {
                     [iphone, mac, iphone, mac, iphone, mac].map(card => (

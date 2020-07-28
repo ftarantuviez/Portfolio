@@ -3,7 +3,9 @@ import React, {Component} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  useParams,
+  useRouteMatch
 } from "react-router-dom";
 import './GlobalStyles.css'
 
@@ -18,17 +20,20 @@ class App extends Component{
 
     render()
     {
+        const urlParams = new URLSearchParams(window.location.search)
+        const projectId = urlParams.get('project')
         return(
             <>
+        
                <Router>
-                <Switch>
-                   <Layaout>
-                       <Route exact path="/"> <Home /> </Route>
-                       <Route exact path="/contact"> <Contact /> </Route>
-                       <Route exact path="/portfolio"> <Portfolio /> </Route>
-                       <Route exact path="/about"> <About /> </Route>
-                   </Layaout>
-                </Switch>
+                    <Switch>
+                        <Layaout>
+                            <Route exact path="/"> <Home /> </Route>
+                            <Route exact path="/contact"> <Contact /> </Route>
+                            <Route exact path="/portfolio"> <Portfolio /> </Route>
+                            <Route exact path="/about"> <About /> </Route>
+                        </Layaout>
+                    </Switch>
                </Router>
             </>
         )

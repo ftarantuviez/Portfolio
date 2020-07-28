@@ -5,9 +5,9 @@
   z-index: 2;
   background-color: #e5b34b;
   display: flex;
-  padding: 50px 60px;
+  /* padding: 50px 60px; */
   padding-right: 20px;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -136,7 +136,9 @@
 
 @media screen and (max-width: 768px){
   #whoami{
-    padding-left: 60px;
+    /* padding-left: 0px;
+    display: flex;
+    flex-direction: */ 
   }
 
   .whoami__description{

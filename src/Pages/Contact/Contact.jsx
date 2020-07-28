@@ -42,7 +42,7 @@ function Contact() {
             </form>
             <h3>Or we can talk by...</h3>
         </div>
-        <div className="fluid-container contact-container justify-content-center">
+        <div className="fluid-container contact-container contact-container2 justify-content-center">
             <ul className="socialMediaList">
                 <li><a target="_blank" href="https://github.com/ftarantuviez"><Icon size={32} icon={github} className="fa fa-github" aria-hidden="true" /></a></li>
                 <li><a target="_blank" href="https://twitter.com/ftarantuviez"><Icon size={32} icon={twitter} className="fa fa-twitter" aria-hidden="true" /></a></li>

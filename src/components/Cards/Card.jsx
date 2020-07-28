@@ -12,7 +12,7 @@ function CardProject({imag}) {
                 <div className="cardProject__back-details">
                     <h2>TIlte here<br/><span>Here a subtitle</span></h2>
                     <p>Here I can put a really little description about the project</p>
-                    <Link to="/" className="btn btn-primary cardProject__button">Description</Link>
+                    <Link to="/portfolio/?project=1" className="btn btn-primary cardProject__button">Description</Link>
                     <a href="https://google.com" className="btn btn-secondary cardProject__button">Web</a>
                 </div>
             </div>

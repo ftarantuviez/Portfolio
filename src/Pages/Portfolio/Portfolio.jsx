@@ -9,9 +9,9 @@ class Portfolio extends Component {
             <div className="bigWrapperPortfolio">
                <Slider />
                <h2 className="m-4">More Projects</h2> 
-                <ListOfCards />
-                <ListOfCards />
-                <ListOfCards />
+                <ListOfCards titleLevelProjects="Complex projects" />
+                <ListOfCards titleLevelProjects="Medium projects" />
+                <ListOfCards titleLevelProjects="Simple projects" />
             </div>
         )}
 }

@@ -3,15 +3,21 @@
     min-height: 100vh;
     background: #141414;
     display: flex;
+    padding-top: 172px;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
 
 }
+
+.contact-container2{
+  padding: 0;
+}
+
 .contact-container h2{
     position: absolute;
     left: 40px;
-    top: 120px;
+    top: 110px;
     color: #e5b34b;
 }
 .contact-container h3{
@@ -48,11 +54,11 @@
 }
 
 .textAreaContact{
-    height: 130px;
+    max-height: 170px;
 }
 
 .buttonContact{
-    width: 10%;
+    width: 150px;
     border-radius: 40px;
     background:#e5b34b;
     border: none;
@@ -66,21 +72,13 @@
 
 
   
-  @media (max-width: 600px) {
-    .socialMediaList {
-      transform: scale(0.6);
+  @media (max-width: 800px) {
+    .socialMediaList{
+      flex-wrap: wrap;
+      justify-content: center;
     }
-  }
-  
-  @media (min-width: 601px) and (max-width: 700px) {
-    .socialMediaList {
-      transform: scale(0.7);
-    }
-  }
-  
-  @media (min-width: 701px) and (max-width: 800px) {
-    .socialMediaList {
-      transform: scale(0.8);
+    .socialMediaList li {
+      margin-bottom: 40px !important;
     }
   }
   
