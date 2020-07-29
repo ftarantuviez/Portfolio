@@ -1,3 +1,5 @@
+
+
 .project__container{
     background-color: #141414;
     min-height: 100vh;
@@ -5,9 +7,68 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    font-family: 'Poppins', sans-serif;
+    position: relative;
 }
 
-.project__container img{
+.notebookImage{
     width: 350px;
+    object-fit: contain;
+    background: transparent radial-gradient(closest-side at 50% 51%, #342525 0%, #141414 100%) 0% 0% no-repeat padding-box;
+}
+
+.project__container2:nth-child(2n+1){
+    background: #141414;
+    height: auto;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: flex;
+}
+.project__container2:nth-child(2n+2){
+    background: #141414;
+    height: auto;
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.project__container-imgBox{
+    position: sticky;
+    top: 0;
+    min-width: 50%;
+    height: 100vh;
+}
+
+.project__container-imgBox img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 450px;
+    transform: translate(-50%, -50%);
+}
+
+.project__container2:nth-child(2n+1) .project__container-content{
+    padding: 100px 0 100px 100px;
+    text-align: left;
+}
+.project__container2:nth-child(2n+2) .project__container-content{
+    padding: 100px 0 100px 100px;
+    text-align: right;
+}
+
+.project__container-content h2{
+    margin: 0 0 20px;
+    font-size: 60px;
+}
+
+.project__container-content p{
+    color: #777;
+    font-size: 18px;
+    
+}
+
+.imageVideo{
+    width: 100%;
     object-fit: contain;
 }

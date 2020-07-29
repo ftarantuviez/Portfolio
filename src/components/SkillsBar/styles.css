@@ -327,7 +327,7 @@ h2 a:hover {
   #bar li div.activeBottom div.infobox {
     font-size: 11px;
     text-align: justify;
-    padding-left: calc(100vw - 90px);
+    /* padding-left: calc(100vw - 90px); */
   }
   #bar li div.bottom div.infobox h3,
   #bar li div.activeBottom div.infobox h3 {
@@ -389,15 +389,15 @@ h2 a:hover {
 }
 
 @media screen and (min-width: 424px) {
-  #bar li div.bottom div.infobox,
+  /* #bar li div.bottom div.infobox,
   #bar li div.activeBottom div.infobox {
     padding-left: calc(100vw - 110px);
-  }
+  } */
 }
 
 @media screen and (min-width: 767px) {
   #wrapper{
-    padding-left: 40px;
+    padding-left: 20px;
   }
   
   #bar li {

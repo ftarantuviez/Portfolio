@@ -16,7 +16,7 @@
     transform-style: preserve-3d;
     perspective: 600px;
     transition: 0.5s;
-    margin: 20px;
+    
 }
 .cardProject__front{
     position: absolute;
@@ -32,7 +32,15 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
+    position: relative;
 }
+.cardProject__front h5{
+    position: absolute;
+    color: white;
+    left: 34%;
+    bottom: 20px;
+}
+
 .cardProject:hover .cardProject__front{
     transform: rotateX(-180deg);
 }
@@ -100,4 +108,18 @@
 
 .listOfCards-row{
     margin-top: 50px;
+}
+
+.card-col{
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width: 991px){
+   /*  .card-col{
+        display: flex;
+        padding: 0;
+    }
+    .cardProject{
+        margin: 0;
+    } */
 }

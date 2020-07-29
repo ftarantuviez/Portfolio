@@ -7,7 +7,7 @@ function CardProject({imag}) {
 
     return (
         <div className="cardProject">
-            <div className="cardProject__front"><img src={imag} alt="herean iamg"/></div>
+            <div className="cardProject__front"><img src={imag} alt="herean iamg"/><h5>Title here</h5></div>
             <div className="cardProject__back">
                 <div className="cardProject__back-details">
                     <h2>TIlte here<br/><span>Here a subtitle</span></h2>

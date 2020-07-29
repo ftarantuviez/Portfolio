@@ -3,9 +3,16 @@
     padding: 0;
 }
 #app{
-    overflow-x: hidden;
+    box-sizing: border-box;
+    
 }
 a:hover{
     text-decoration: none;
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    #app{
+        overflow-x: hidden;
+    }
 }

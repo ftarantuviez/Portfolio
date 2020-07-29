@@ -11,7 +11,7 @@ function ListOfCards(props) {
             <div className="row listOfCards-row">
                 {
                     [iphone, mac, iphone, mac, iphone, mac].map(card => (
-                        <div key={Math.random() * 100} className="col-4">
+                        <div key={Math.random() * 100} className="col-sm-6 col-lg-4 col-12 card-col">
                             <CardProject 
                                 imag={card}
                             />

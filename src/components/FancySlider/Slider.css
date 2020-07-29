@@ -26,6 +26,46 @@
     border-color: #cc9a2e !important;
 }
 
+.slider-button{
+    font-weight: 500;
+}
+
 .btn-primary:focus{
     box-shadow: 0 0 0 0.2rem rgba(229, 179, 79, .25) !important;
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 700px){
+    .carouselInner-image{
+        height: auto;
+        object-fit: contain;
+    }
+
+    .carousel-caption{
+        position: relative;
+        height: auto;
+        background: #141414;
+        left: 0;
+        top: 0;
+    }
+
+    .captionImage{
+        width: 90px;
+    }
+
+    .control-icon{
+        position: absolute;
+        top: 30%;
+    }
+
+    .slider-button{
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    .carousel-caption{
+
+    }
 }

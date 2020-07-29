@@ -24,6 +24,8 @@
 
 .answer h4{
     margin-bottom: 35px;
+    font-family: "Poppins", sans-serif;
+    color: #92681e;
 }
 
 .answer p {
@@ -35,10 +37,14 @@
 
 .about__container-photo{
     max-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
 
 .about__container-photo img{
-    width: 80%;
+    width: 100%;
     height: 100%;
     object-fit: contain;
 }
@@ -48,26 +54,57 @@
     justify-content: center;
     
 }
-.about__video-container{
-    position: absolute;
-    padding: 80px;
-    top: 73px;
-    width: 80%;
-    height: 500px;
-    background-color: transparent;
-    border: 6px solid rgb(229, 175, 79);
-}
 
-.about__video-container-gray{
-    width: 100%;
-    height: 100%;
-    background: black;
+
+.about__container-dropdown{
+    font-family: sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 50px;
 }
 
+.about__container-dropdown button{
+    position: relative;
+    width: 200px;
+    height: 60px;
+    font-size: 24px;
+    background: #e5b34b;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+}
 
+.about__container-dropdown ul{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background: #ccc;
+    transform-origin: top;
+    transform: perspective(1000px) rotateX(-90deg);
+    transition: .5s; 
+    list-style: none;
+}
+
+.about__container-dropdown ul.buttonActiveCV{
+    transform: perspective(1000px) rotateX(0deg);
+}
+
+.about__container-dropdown ul li a{
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background: #262626;
+    color: #fff;
+    transition: .5s;
+}
+
+.about__container-dropdown ul li a:hover{
+    background: #e5b34b;
+}
 
 .about__container4{
     display: flex;
@@ -119,7 +156,7 @@
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 6em;
+    font-size: 5em;
     color: rgba(255, 255, 255, .05);
     font-weight: 700;
 }
@@ -161,6 +198,19 @@
 
 }
 
+.knowledgeList{
+    padding-left: 50px;
+    list-style: circle;
+    margin-bottom: 40px;
+}
+.knowledgeList li{
+    line-height: 2;
+}
+
+.knowledgeList li a{
+    color: #92681e;
+}
+
 @media (max-width: 992px){
     .about__container4{
         width: 100%;
@@ -175,6 +225,15 @@
 }
 
 @media (max-width: 768px){
+    
+    .about__container2{
+        padding-left: 27px;
+    }
+
+    .about__container h4{
+        left: 0;
+    }
+    
     .card-hobbie{
         max-width: 300px;
         flex-direction: column;
