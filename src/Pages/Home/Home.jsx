@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 
 import './Home.css'
-
+import Loading from '../../components/Loading/Loading'
 import Logo from '../../components/Logo'
 import WhoAmI from '../../components/whoamiSection/WhoAmI'
 import {SkillsBar} from '../../components/SkillsBar/SkillsBar'
@@ -12,7 +12,8 @@ class Home extends Component{
         this.scrollFunction = this.scrollFunction.bind(this)
         this.state = {
             scrollEffect: '',
-            displayToggle: ''
+            displayToggle: '',
+            loading: true
         };
     }
 
@@ -30,8 +31,8 @@ class Home extends Component{
     componentWillUnmount = () =>{
         window.removeEventListener('scroll', this.scrollFunction, true)
     }
+    
     render(){
-
 
     return(
         <>

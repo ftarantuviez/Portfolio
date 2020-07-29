@@ -15,7 +15,7 @@ import Contact from './Pages/Contact/Contact'
 import Portfolio from './Pages/Portfolio/Portfolio'
 import About from './Pages/About/About'
 import Project from './Pages/Project/Project'
-
+import Error from './Pages/Error/Error'
 
 class App extends Component{
 
@@ -27,15 +27,16 @@ class App extends Component{
             <>
         
                <Router>
-                    <Switch>
-                        <Layaout>
+                    <Layaout>
+                        <Switch>
                             <Route exact path="/"> <Home /> </Route>
                             <Route exact path="/contact"> <Contact /> </Route>
                             <Route exact path="/portfolio"> <Portfolio /> </Route>
                             <Route exact path="/about"> <About /> </Route>
                             <Route exact path="/project/:id"> <Project /> </Route>
-                        </Layaout>
-                    </Switch>
+                            <Route component={Error} />
+                        </Switch>
+                    </Layaout>
                </Router>
             </>
         )

@@ -38,7 +38,7 @@ function About() {
         <>
         <div className="about__container about__container2">
         <h2>More about me</h2>
-            <div className="about__container-text col-7">
+            <div className="about__container-text col-12 col-md-7">
                 <div className="answer">
                     <h4>Where I learned code?</h4>
                     <p>
@@ -55,7 +55,7 @@ function About() {
                     <p>The answer to this question have origin in my passion for maths, technology, and science at all. Programming is a great way to combine it.</p>
                 </div>
             </div>
-            <div className="about__container-photo col-5">
+            <div className="about__container-photo col-12 col-md-5">
                 <img src={man} alt=""/>
             </div>
 
@@ -63,8 +63,8 @@ function About() {
             <div className="ballAbout" id="ba-1"></div>
             <div className="stickAbout" id="s-2"></div>
         </div>
-       {/*  <div className="about__container about__container1">
-            <div className="about__container-dropdown col-5">
+        <div className="about__container about__container1">
+            <div className="about__container-dropdown col-12 col-md-5">
                 <div>
                     <button onClick={handleClick}>Click here</button>
                     <ul className={`${listClassName ? 'buttonActiveCV' : ''}`}>
@@ -76,7 +76,7 @@ function About() {
 
                 </div>
             </div>
-            <div className="about__container-text col-7">
+            <div className="about__container-text col-12 col-md-7">
                 <div className="answer">
                     <h4>I enjoy...</h4>
                     <p>
@@ -96,7 +96,7 @@ function About() {
             <div className="stickAbout" id="s-5"></div>
             <div className="ballAbout" id="ba-3"></div>
             <div className="stickAbout" id="s-6"></div>
-        </div> */}
+        </div>
 
         <div className="about__container about__container4">
             <h2>Hobbies</h2>

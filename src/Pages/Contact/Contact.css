@@ -1,6 +1,6 @@
 .contact-container{
     position: relative;
-    min-height: 100vh;
+    min-height: auto;
     background: #141414;
     display: flex;
     padding-top: 172px;
@@ -51,10 +51,12 @@
 .inputContact{
     border: none;
     border-bottom: 1px solid #707070;
+    font-size: 18px;
 }
 
 .textAreaContact{
     max-height: 170px;
+    font-size: 18px;
 }
 
 .buttonContact{
@@ -69,7 +71,9 @@
     margin-bottom: 50px;
 }
 
-
+.socialMediaList{
+  margin: 150px 0;
+}
 
   
   @media (max-width: 800px) {
@@ -83,7 +87,7 @@
   }
   
   .socialMediaList {
-    margin: 0;
+    
     padding: 0;
     list-style: none;
     display: flex;

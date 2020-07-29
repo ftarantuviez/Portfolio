@@ -1,15 +1,16 @@
 .about__container{
-    min-height: 100vh;
+    min-height: 90vh;
     background-color: #141414;
     color: white;
     display: flex;
     position: relative;
     padding: 190px 90px;
+    flex-wrap: wrap;
 
 }
 
 .about__container1{
-    padding-top: 0;
+    padding-top: 50px;
 }
 .about__container2{
     padding-bottom: 0;
@@ -35,17 +36,17 @@
     margin-bottom: 35px;
 }
 
+
 .about__container-photo{
     max-height: 90vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 0;
 }
 
 .about__container-photo img{
-    width: 100%;
-    height: 100%;
+    max-height: 400px;
     object-fit: contain;
 }
 
@@ -205,64 +206,12 @@
 }
 .knowledgeList li{
     line-height: 2;
+    font-size: 17px;
 }
 
 .knowledgeList li a{
     color: #92681e;
 }
-
-@media (max-width: 992px){
-    .about__container4{
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        padding-top: 190px;
-    }
-    .card-hobbie{
-        width: 400px;
-    }
-}
-
-@media (max-width: 768px){
-    
-    .about__container2{
-        padding-left: 27px;
-    }
-
-    .about__container h4{
-        left: 0;
-    }
-    
-    .card-hobbie{
-        max-width: 300px;
-        flex-direction: column;
-        height: auto;
-
-    }
-    .card-hobbie .imgBx-hobbie{
-        position: relative;
-        
-    }
-    .card-hobbie .imgBx-hobbie,
-    .card-hobbie:hover .imgBx-hobbie{
-        width: 100%;
-        height: 200px;
-        left: 0;
-    }
-
-    .card-hobbie .imgBx-hobbie svg,
-    .card-hobbie:hover .imgBx-hobbie svg{
-        max-width: 100px;
-    }
-
-    .card-hobbie .content-cardHobbie{
-        position: relative;
-        width: 100%;
-        bottom: 0;
-    } 
-}
-
 
 .stickAbout{
     height: 240px;
@@ -347,3 +296,136 @@
     right: 50%;
     z-index: 1;
 }
+
+@media screen and (min-width: 320px) and (max-width: 560px){
+    .about__container2{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .about__container-text{
+        padding-left: 0;
+    }
+
+    .about__container h2{
+        left: auto;
+    }
+
+    #s-1{
+        top: 125px;
+        right: 20px;
+        height: 83px;
+    }
+
+    #ba-1{
+        top: 115px;
+        right: 15px;
+        height: 17px;
+        width: 17px;
+    }
+
+    #s-2{
+        top: 107px;
+        right: 44px;
+        height: 33px;
+    }    
+}
+
+@media screen and (min-width: 320px) and (max-width: 710px){
+    .about__container1{
+        padding-left: 20px;
+        padding-right: 0;
+    }
+
+    #s-5{
+        bottom: 0;
+        left: 20px;
+    }
+
+    #ba-3{
+        left: 15px;
+        bottom: 0;
+    }
+
+    #s-6{
+        bottom: -65px;
+        left: 99px;
+        height: 146px;
+    }
+
+    #s-3 {
+        right: 20px;
+        bottom: 0;
+    }
+
+    #ba-2 {
+        right: 15px;
+        bottom: 0;
+    }
+    
+    #s-4 {
+        bottom: -65px;
+        right: 92px;
+        height: 146px
+    }
+}
+
+@media screen and (min-width: 768px){
+    .about__container1{
+        padding-bottom: 0;
+    }
+}
+
+@media (max-width: 992px){
+    .about__container4{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        padding-top: 190px;
+    }
+    .card-hobbie{
+        width: 400px;
+    }
+}
+
+@media (max-width: 767px){
+    
+    .about__container h4{
+        left: 0;
+    }
+    
+    .card-hobbie{
+        max-width: 300px;
+        flex-direction: column;
+        height: auto;
+
+    }
+    .card-hobbie .imgBx-hobbie{
+        position: relative;
+        
+    }
+    .card-hobbie .imgBx-hobbie,
+    .card-hobbie:hover .imgBx-hobbie{
+        width: 100%;
+        height: 200px;
+        left: 0;
+    }
+
+    .card-hobbie .imgBx-hobbie svg,
+    .card-hobbie:hover .imgBx-hobbie svg{
+        max-width: 100px;
+    }
+
+    .card-hobbie .content-cardHobbie{
+        position: relative;
+        width: 100%;
+        bottom: 0;
+    } 
+
+    .about__container1{
+        flex-direction: column-reverse;
+        
+    }
+}
+
+
