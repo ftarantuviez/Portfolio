@@ -12,8 +12,7 @@ class Home extends Component{
         this.scrollFunction = this.scrollFunction.bind(this)
         this.state = {
             scrollEffect: '',
-            displayToggle: '',
-            loading: true
+            displayToggle: ''
         };
     }
 
