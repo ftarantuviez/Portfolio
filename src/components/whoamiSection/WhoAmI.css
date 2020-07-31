@@ -6,12 +6,26 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 40px;
+}
+
+.whoamititle{
+  font-family: 'Alegreya Sans', sans-serif;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+  text-decoration: line-through;
+  font-style: italic;
 }
 
 .whoami__description{
   font-size: 30px;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 40px 40px;
+  font-family: 'Lato', sans-serif;
+  padding: 40px 30px;
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.6;
+  letter-spacing: .9px;
+  
 }
 
 .whoami__cardsContainer{
@@ -64,27 +78,12 @@
   color: #272525;
 }
 
-.card__readMore{
-  display: inline-block;
-  padding: 10px 20px;
-  text-align: center;
-  margin-top: 15px;
-  border-radius: 40px;
-  color: #272525;
-  font-size: 16px;
-  text-decoration: none;
-  box-shadow: -4px -4px 15px rgba(243, 193, 91, 1),
-               4px 4px 15px rgba(0, 0, 0, .1);
+.portfolioLink{
+  color: black;
+  font-style: italic;
 }
-
-.card__readMore:hover{
-  box-shadow: inset -4px -4px 10px rgba(243, 193, 91, .5),
-              inset 4px 4px 10px rgba(0, 0, 0, .1);
-  color:#383636;
-}
-.card__readMore:hover span{
-  display: block;
-  transform: scale(.98);
+.portfolioLink:hover{
+  color: rgb(26, 25, 25);
 }
 
 .whoami__cardsContainer .card:hover .card__image,
@@ -130,24 +129,19 @@
 }
 
 
-@media screen and (min-width: 320px) and (max-width: 475px){
+@media screen and (min-width: 320px) and (max-width: 1024px){
   .card{
     width: 280px;
   }
+
+  .whoami__description{
+    
+  }
+
 }
 
 
 @media screen and (max-width: 768px){
-  #whoami{
-    /* padding-left: 0px;
-    display: flex;
-    flex-direction: */ 
-  }
-
-  .whoami__description{
-    padding-left: 0;
-    font-size: 27px;
-  }
   
   #b-1{
     left: 20px;

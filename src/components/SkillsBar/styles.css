@@ -78,6 +78,7 @@ h2 a:hover {
   list-style: none;
 }
 #bar li {
+  margin-bottom: 10px;
 }
 
 /* Last bottom should have a shadow */
@@ -100,12 +101,19 @@ h2 a:hover {
   -moz-border-radius: 40px/100px;
   -webkit-border-radius: 40px 100px;
   border-radius: 40px/100px;
+  transition-property: margin-left;
+  transition-duration: 600ms;
   -webkit-transition-property: margin-left;
   -webkit-transition-duration: 600ms;
+  -moz-transition-property: margin-left;
+  -moz-transition-duration: 600ms;
+
+  display: flex;
+  align-items: center;
 }
 #bar li div.top img,
 #bar li div.activeTop img {
-  margin-top: 15px;
+  max-width: 70px;
 }
 
 /* Bar bottom */
@@ -125,15 +133,23 @@ h2 a:hover {
     from(#97a7a9),
     to(#b8cbcd)
   );
+  transition-property: width;
+  transition-duration: 600ms;
   -webkit-transition-property: width;
   -webkit-transition-duration: 600ms;
+  -moz-transition-property: width;
+  -moz-transition-duration: 600ms;
 }
 #bar li div.bottom div.infobox,
 #bar li div.activeBottom div.infobox {
   padding: 30px;
   padding-left: calc(100vw - 140px);
+  transition-property: color;
+  transition-duration: 500ms;
   -webkit-transition-property: color;
   -webkit-transition-duration: 500ms;
+  -moz-transition-property: color;
+  -moz-transition-duration: 500ms;
 }
 #bar li div.bottom div.infobox h3,
 #bar li div.activeBottom div.infobox h3 {
@@ -143,8 +159,12 @@ h2 a:hover {
 #bar li div.activeBottom div.infobox p {
   font-family: "Lucida Grande", Arial, Helvetica, Sans-Serif;
   opacity: 0;
+  transition-property: opacity;
+  transition-duration: 500ms;
   -webkit-transition-property: opacity;
   -webkit-transition-duration: 500ms;
+  -moz-transition-property: opacity;
+  -moz-transition-duration: 500ms;
 }
 
 /* General hover actions */
@@ -161,6 +181,10 @@ h2 a:hover {
 /* React bar */
 #react div.top {
   z-index: 99;
+  background-image: url('../../images/reactIcon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #react div.bottom {
   z-index: 98;
@@ -170,6 +194,10 @@ h2 a:hover {
 #react:read-only div.activeTop {
   z-index: 999;
   background-color: #7099ab;
+  background-image: url('../../images/reactIcon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   margin-left: calc(86.6vw - 100px);
 }
 #react:hover div.bottom,
@@ -192,6 +220,10 @@ h2 a:hover {
 /* HTML & CSS bar */
 #htmlCss div.top {
   z-index: 97;
+  background-image: url('../../images/htmlCss.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #htmlCss div.bottom {
   z-index: 96;
@@ -201,12 +233,17 @@ h2 a:hover {
 #htmlCss:read-only div.activeTop {
   z-index: 997;
   background-color: #bc003c;
+  background-image: url('../../images/htmlCss.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   margin-left: calc(92.8vw - 100px);
 }
 #htmlCss:hover div.bottom,
 #htmlCss:read-only div.activeBottom {
   z-index: 996;
   background-color: #9d0032;
+
   width: calc(92.8vw - 60px);
   background: -moz-linear-gradient(-90deg, #9d0032, #7a0027);
   background: -webkit-gradient(
@@ -226,6 +263,11 @@ h2 a:hover {
 /* JavaScript bar */
 #javascript div.top {
   z-index: 95;
+  background-image: url('../../images/tJs.png') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  
 }
 #javascript div.bottom {
   z-index: 94;
@@ -234,6 +276,10 @@ h2 a:hover {
 #javascript:hover div.top,
 #javascript:read-only div.activeTop {
   z-index: 995;
+  background-image: url('../../images/tJs.png') !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: #d98f23;
   margin-left: calc(84vw - 100px);
 }
@@ -259,6 +305,10 @@ h2 a:hover {
 /* Adobe XD bar */
 #adobexd div.top {
   z-index: 93;
+  background-image: url('../../images/adobeIcon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #adobexd div.bottom {
   z-index: 92;
@@ -267,6 +317,10 @@ h2 a:hover {
 #adobexd:hover div.top,
 #adobexd:read-only div.activeTop {
   z-index: 993;
+  background-image: url('../../images/adobeIcon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: #3f1150;
   margin-left: calc(66.3vw - 100px);
 }
@@ -288,6 +342,10 @@ h2 a:hover {
 /* Swift bar */
 #swift div.top {
   z-index: 91;
+  background-image: url('../../images/swiftIcon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 #swift div.bottom {
   z-index: 90;
@@ -297,6 +355,10 @@ h2 a:hover {
 #swift:read-only div.activeTop {
   z-index: 991;
   background-color: #dbdcd4;
+  background-image: url('../../images/swiftIcon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   margin-left: calc(44.2vw - 100px);
 }
 #swift:hover div.bottom,
@@ -332,9 +394,6 @@ h2 a:hover {
   #bar li div.bottom div.infobox h3,
   #bar li div.activeBottom div.infobox h3 {
     font-size: 14px;
-  }
-  #bar li {
-    margin-bottom: 0;
   }
 
   #react:hover div.top,
@@ -398,10 +457,6 @@ h2 a:hover {
 @media screen and (min-width: 767px) {
   #wrapper{
     padding-left: 20px;
-  }
-  
-  #bar li {
-    margin-bottom: 0;
   }
   #bar li div.bottom div.infobox,
   #bar li div.activeBottom div.infobox {

@@ -1,3 +1,5 @@
+
+
 .wrapperMain {
     position: relative;
     height: 200vh;
@@ -6,7 +8,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    background: #000;
+    background: #010101;
   }
 .container-effect{
   position: fixed;
@@ -28,63 +30,51 @@
   background-attachment: fixed;
   clip-path: circle(0px at center)
 }
-.text__container {
-  margin-left: 75px;
+.wavy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: 40px;
 }
-.txt {
+
+.wavy p{
+  position: relative;
+  font-family: sans-serif;
   color: #e5b34b;
-  background: #000000;
-  font-size: 40px;
-  font-weight: bold;
-  font-family: "Playfair Display", serif;
+  font-size: 2em;
+  letter-spacing: 4px;
+  overflow: hidden;
   text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #e5b34b, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animateFT 3s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 194, 68, .15);
+
 }
+
+@keyframes animateFT{
+  0%{
+    background-position: -500%;
+  }
+  100%{
+    background-position: 500%;
+  }
+}
+
 .frontend-engineer {
   color: white;
   font-size: 23px;
   letter-spacing: 2px;
 }
-.txt::before {
-  content: "Francisco Tarantuviez";
-  position: absolute;
-
-  filter: blur(0.8px);
-}
-.neon-wrapper {
-  display: inline-flex;
-  filter: brightness(100%);
-  overflow: hidden;
-}
-.gradient {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120%;
-  height: 120%;
-  mix-blend-mode: multiply;
-}
-.dodge {
-  background: radial-gradient(circle, #eab952, #000000 35%) center / 25% 25%;
-  position: absolute;
-  top: -200%;
-  left: -300%;
-  right: 0;
-  bottom: 0;
-  mix-blend-mode: color-dodge;
-  animation: dodge-area 3s linear infinite;
-}
-@keyframes dodge-area {
-  to {
-    transform: translate(50%, 50%);
-  }
-}
 
 
 .skills-title-container{
-  display: flex;
-  padding: 100px;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
+  padding: 100px 0;
   color: #e5b34b;
   background-color: #141414; 
 }
@@ -150,8 +140,11 @@
   background: url('../../images/bg.jpg');
   background-attachment: fixed;
   font-size: 70px;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 
 .book-credits{
@@ -184,9 +177,27 @@
 
 @media screen and (max-width: 768px){
   
+  .container-effect{
+    flex-direction: column;
+  }
+
   .container-effect svg{
     width: 150px;
     height: 150px;
+  }
+
+  .wavy{
+    display: block;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+  .wavy p{
+    padding: 0 40px;
+  }
+
+  #g-1{
+    left: 10px !important;
   }
 
   .booksProjects-container{
@@ -226,15 +237,6 @@
     margin-bottom: 20px;
   }
 
-  .text__container{
-    margin-left: 20px;
-  }
-
-  .txt{
-    font-size: 25px;
-    text-align: center;
-    display: flex;
-  }
 
   .frontend-engineer{
     margin-top: 10px;
@@ -246,8 +248,6 @@
     background-position-x: 50%;
     background-size: cover;
   }
-
-  
 
   .booksProjects-book{
     width: 175px;

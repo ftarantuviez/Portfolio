@@ -6,6 +6,8 @@ import Logo from '../../components/Logo'
 import WhoAmI from '../../components/whoamiSection/WhoAmI'
 import {SkillsBar} from '../../components/SkillsBar/SkillsBar'
 import { Link } from 'react-router-dom'
+
+
 class Home extends Component{
     constructor(props){
         super(props) 
@@ -14,6 +16,7 @@ class Home extends Component{
             scrollEffect: '',
             displayToggle: ''
         };
+
     }
 
     scrollFunction = () =>{
@@ -31,6 +34,10 @@ class Home extends Component{
         window.removeEventListener('scroll', this.scrollFunction, true)
     }
     
+    addDelayFunction = (a) => {
+        return (a * 0.1)
+    }
+
     render(){
 
     return(
@@ -39,15 +46,8 @@ class Home extends Component{
            <div className="wrapperMain">
                 <div className="container-effect">
                     <Logo widthsvg="200px" heightsvg="200px" />
-                    <div className="text__container">
-                    <div className="neon-wrapper">
-                        <span className="txt">
-                        Francisco <br /> Tarantuviez{" "}
-                        </span>
-                        <span className="gradient" />
-                        <span className="dodge" />
-                    </div>
-                    <p className="frontend-engineer">Frontend Engineer </p>
+                    <div className="wavy">
+                        <p>Francisco Tarantuviez</p>
                     </div>
                 </div>
                 <div className="stick gold" id="g-1"></div>
@@ -57,7 +57,6 @@ class Home extends Component{
 
             <div className="fluid-container skills-title-container">
                 <h2>My skills</h2>
-                <span><p>See others +</p></span>
             </div>
             
             <SkillsBar />
