@@ -1,19 +1,22 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import iphone from '../../images/iphone.png'
-import mac from '../../images/mac.png'
 
-function CardProject({imag}) {
+
+
+
+function CardProject({imag, title, shortDescription, subtitleCard, webLink, route}) {
 
     return (
         <div className="cardProject">
-            <div className="cardProject__front"><img src={imag} alt="herean iamg"/><h5>Title here</h5></div>
+            <div className="cardProject__front"><img src="https://i.pinimg.com/originals/65/ba/48/65ba488626025cff82f091336fbf94bb.gif" onLoad={(e) => e.target.src = imag[0]} alt={title}/><h5>{title}</h5></div>
             <div className="cardProject__back">
                 <div className="cardProject__back-details">
-                    <h2>TIlte here<br/><span>Here a subtitle</span></h2>
-                    <p>Here I can put a really little description about the project</p>
-                    <Link to="/portfolio/?project=1" className="btn btn-primary cardProject__button">Description</Link>
-                    <a href="https://google.com" className="btn btn-secondary cardProject__button">Web</a>
+                    <h2>{title}<br/><span>{subtitleCard}</span></h2>
+                    <p>{shortDescription}</p>
+                    <Link to={`/project/${route}`} className="btn btn-primary cardProject__button">Description</Link>
+                    {
+                        webLink && <a href={webLink} target="_blank"  className="btn btn-secondary cardProject__button">Web</a>
+                    }       
                 </div>
             </div>
         </div>

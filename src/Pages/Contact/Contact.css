@@ -76,6 +76,79 @@
 }
 
   
+.succesSvg {
+  width: 100px;
+  display: block;
+  margin: 40px auto 0;
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+
+}
+
+.path .circle {
+  -webkit-animation: dash .9s ease-in-out;
+  animation: dash .9s ease-in-out;
+}
+.path .line {
+  stroke-dashoffset: 1000;
+  -webkit-animation: dash .9s .35s ease-in-out forwards;
+  animation: dash .9s .35s ease-in-out forwards;
+}
+
+.path .check {
+  stroke-dashoffset: -100;
+  -webkit-animation: dash-check .9s .35s ease-in-out forwards;
+  animation: dash-check .9s .35s ease-in-out forwards;
+}
+
+.success{
+  text-align: center;
+  margin: 20px 0 60px;
+  font-size: 1.25em;
+  color: #73AF55;
+}
+
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100;
+  }
+  100% {
+    stroke-dashoffset: 900;
+  }
+}
+
+
   @media (max-width: 800px) {
     .socialMediaList{
       flex-wrap: wrap;
@@ -219,4 +292,82 @@
     background: -webkit-linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     background: linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  }
+
+  @media screen and (max-width: 768px){
+    .socialMediaList li:nth-child(1) a {
+      background-color: #24292e;
+    }
+    
+    .socialMediaList li:nth-child(1) a::before {
+      background-color: #171a1d;
+    }
+    
+    .socialMediaList li:nth-child(1) a::after {
+      background-color: #292f35;
+    }
+    
+    .socialMediaList li:nth-child(2) a {
+      background-color: #55acee;
+    }
+    
+    .socialMediaList li:nth-child(2) a::before {
+      background-color: #4489be;
+    }
+    
+    .socialMediaList li:nth-child(2) a::after {
+      background-color: #66b4ef;
+    }
+    
+    .socialMediaList li:nth-child(3) a {
+      background-color: #25d366;
+    }
+    
+    .socialMediaList li:nth-child(3) a::before {
+      background-color: #21c05b;
+    }
+    
+    .socialMediaList li:nth-child(3) a::after {
+      background-color: #2ae26d;
+    }
+    
+    .socialMediaList li:nth-child(4) a {
+      background-color: #0077b5;
+    }
+    
+    .socialMediaList li:nth-child(4) a::before {
+      background-color: #005f90;
+    }
+    
+    .socialMediaList li:nth-child(4) a::after {
+      background-color: #1984bc;
+    }
+    
+    .socialMediaList li:nth-child(5) a {
+      background: #f09433; 
+      background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+      background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+      background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+    
+    .socialMediaList li:nth-child(5) a::before {
+      background: #f09433; 
+      background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+      background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+      background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+    
+    .socialMediaList li:nth-child(5) a::after {
+      background: #f09433; 
+      background: -moz-linear-gradient(90deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+      background: -webkit-linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+      background: linear-gradient(90deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+
+    .socialMediaList li a i{
+      color: white !important;
+    }
   }

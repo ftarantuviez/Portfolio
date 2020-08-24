@@ -22,7 +22,7 @@ class Home extends Component{
     scrollFunction = () =>{
         const value = window.scrollY;
         this.setState({scrollEffect: value})
-        if(value > 1300) this.setState({displayToggle: 'none'})
+        if(value > 1300 || window.innerWidth > 425) this.setState({displayToggle: 'none'})
         else this.setState({displayToggle: 'block'})
     }
 
@@ -34,9 +34,6 @@ class Home extends Component{
         window.removeEventListener('scroll', this.scrollFunction, true)
     }
     
-    addDelayFunction = (a) => {
-        return (a * 0.1)
-    }
 
     render(){
 
@@ -65,7 +62,7 @@ class Home extends Component{
                 <Link to="/portfolio">
                     <div className="booksProjects-book">
                         <div className="book-cover"></div>
-                      <h2>Projects <span>Book</span> </h2>
+                        <h2>Projects <span>Book</span> </h2>
                         <div className="book-credits">Written By <span><i>Francisco Tarantuviez</i></span></div>
                     </div>
                 </Link>

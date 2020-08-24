@@ -3,7 +3,6 @@
 .wrapperMain {
     position: relative;
     height: 200vh;
-    z-index: -1;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -76,6 +75,8 @@
   text-align: center;
   padding: 100px 0;
   color: #e5b34b;
+  position: relative;
+  z-index: 2;
   background-color: #141414; 
 }
 
@@ -83,11 +84,14 @@
   width: 100%;
   min-height: 120vh;
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
-  background: url('../../images/floor.jpg');
+  background-image: url('../../images/floor.jpg');
   background-attachment: fixed;
+  -webkit-background-attachment: fixed;
   background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .booksProjects-book{
@@ -108,7 +112,7 @@
   content: '';
   width: 30px;
   height: 100%;
-  background: url('../../images/bg.jpg');
+  background-image: url('../../images/bg.jpg');
   position: absolute;
   top: 0;
   left: 0;
@@ -137,7 +141,7 @@
 }
 
 .booksProjects-book h2 span{
-  background: url('../../images/bg.jpg');
+  background-image: url('../../images/bg.jpg');
   background-attachment: fixed;
   font-size: 70px;
   background-clip: text;

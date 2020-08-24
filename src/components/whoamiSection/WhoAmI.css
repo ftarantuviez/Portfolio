@@ -7,6 +7,8 @@
   align-items: center;
   flex-direction: column;
   padding-top: 40px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
 .whoamititle{
@@ -109,8 +111,8 @@
 
 #g-1{
   left: 30px;
-  height: 120vh;
-  bottom: 0;
+  height: 122vh;
+  bottom: -30px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }

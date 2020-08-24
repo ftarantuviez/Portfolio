@@ -85,7 +85,7 @@ export const SkillsBar = () => {
         </ul>
       </div>
     </div>
-    <div className="fluid-container d-flex justify-content-center align-items-center p-3" style={{background: '#141414'}}>
+    <div className="fluid-container button-skills d-flex justify-content-center align-items-center p-3" style={{background: '#141414'}}>
       <button onClick={handleClick} className="btn btn-primary buttonSkills">{buttonText}</button> 
     </div>
     </>

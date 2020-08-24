@@ -4,6 +4,7 @@
 }
 #app{
     box-sizing: border-box;
+    background: #141414;
     
 }
 a:hover{

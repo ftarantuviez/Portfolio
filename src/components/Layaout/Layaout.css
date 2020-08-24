@@ -62,7 +62,7 @@
     width: 100%;
     height: 280px;
     position: relative;
-    z-index: 1000;
+    z-index: auto;
     background-color: #0d0d0d;
     display: flex;
     flex-direction: column;
@@ -231,6 +231,26 @@
 
     .navbar__burger-menu{
         display: flex;
+    }
+
+    .t{
+        background: #1da1f2;
+    }
+    .g{
+        background: #24292e;
+    }
+    .i{
+        background: #f09433; 
+        background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+        background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+        background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    }
+    .e{
+        background: #D44638;
+    }
+    .l{
+        background: #0077b5;
     }
 
     

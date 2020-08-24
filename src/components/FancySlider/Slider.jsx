@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import './Slider.css'
-import netflix from '../../images/netflix.png'
-import localhost_8080_ from '../../images/localhost_8080_.png'
+
 
 function Slider() {
+
+    const [loaded, setLoaded] = useState(false)
+
+    const handleLoad = (e) => {
+        e.target.src = e.target.name
+        setLoaded(true)
+    }
+
+    const URL_preloader = 'https://i.pinimg.com/originals/e3/f6/2f/e3f62f9caff119965b4f54aae69f9eb3.gif'
+
     return (
         <div id="carouselExampleCaptions" className="carousel slide" data-ride="carousel">
             <ol className="carousel-indicators">
@@ -14,40 +23,50 @@ function Slider() {
             </ol>
             <div className="carousel-inner">
                 <div className="carousel-item active">
-                <img src={netflix} className="d-block w-100 carouselInner-image" alt="..." />
+                <img src={URL_preloader} onLoad={handleLoad} name="https://i.ibb.co/CJJmcRP/covidtracker-4b8be-web-app-min.png" className="d-block w-100 carouselInner-image" alt="Covid Tracker | React App" />
+                {loaded && (
+                    <>
                 <div className="background-darker"></div>
                 <div className="carousel-caption d-md-block">
-                    <img className="captionImage" src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt=""/>
-                    <h6>Netflix clone. Originality? 0. Precision? 100%</h6>
+                    <h1>COVID-19 TRACKER</h1>
+                    <h6>Maps, graphs, and real data. Follow the statistics of the Covid!</h6>
                     <div className="buttons-container m-3">
-                        <a href="https://netflix-clone-93b61.web.app/" className="btn btn-primary slider-button mr-2" target="_blank" rel="noopener noreferrer">Description</a>
-                        <Link className="btn btn-secondary slider-button" to="/">Web</Link>
+                        <a href="https://covidtracker-4b8be.web.app/" className="btn btn-secondary slider-button mr-2" target="_blank" rel="noopener noreferrer">Web</a>
+                        <Link className="btn btn-primary slider-button" to="/project/covid-tracker">Description</Link>
                     </div>
                 </div>
+                </>)}
             </div>
             <div className="carousel-item">
-            <img src={netflix} className="d-block w-100 carouselInner-image" alt="..." />
-            <div className="background-darker"></div>
-            <div className="carousel-caption  d-md-block">
-            <img className="captionImage" src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt=""/>
-                <h6>Netflix clone. Originality? 0. Precision? 100%</h6>
-                <div className="buttons-container m-3">
-                    <a href="https://netflix-clone-93b61.web.app/" className="btn btn-primary slider-button mr-2" target="_blank" rel="noopener noreferrer">Description</a>
-                    <Link className="btn btn-secondary slider-button" to="/">Web</Link>
-                </div>
-            </div>
+            <img src={URL_preloader} onLoad={handleLoad} name="https://i.ibb.co/K9t0chq/voice-controlled-news-web-app-min.png" className="d-block w-100 carouselInner-image" alt="Voice Controlled | React App" />
+                {
+                    loaded &&<>
+                        <div className="background-darker"></div>
+                        <div className="carousel-caption  d-md-block">
+                        <img className="captionImage-instagram" src="https://alan.app/voice/images/previews/preview.jpg" alt="Voice controller image"/>
+                            <h6>Speak with Artificial Intelligence. Ask to Alan about the latest news.</h6>
+                            <div className="buttons-container m-3">
+                                <a href="https://voice-controlled-news.web.app/" className="btn btn-secondary slider-button mr-2" target="_blank" rel="noopener noreferrer">Web</a>
+                                <Link className="btn btn-primary slider-button" to="/project/voice-controlled">Description</Link>
+                            </div>
+                        </div>
+                    </>
+                }
             </div>
             <div className="carousel-item">
-            <img src={netflix} className="d-block w-100 carouselInner-image" alt="..." />
+            <img src={URL_preloader} onLoad={handleLoad} name="https://i.ibb.co/GdrDmJ2/netflix-clone-93b61-web-app-1-min.png" className="d-block w-100 carouselInner-image" alt="Netflix Clone | React App" />
+            {loaded && <>
             <div className="background-darker"></div>
             <div className="carousel-caption d-md-block">
             <img className="captionImage" src="https://image.tmdb.org/t/p/original/wwemzKWzjKYJFfCeiB57q3r4Bcm.png" alt=""/>
                 <h6>Netflix clone. Originality? 0. Precision? 100%</h6>
                 <div className="buttons-container m-3">
-                    <a href="https://netflix-clone-93b61.web.app/" className="btn btn-primary slider-button mr-2" target="_blank" rel="noopener noreferrer">Description</a>
-                    <Link className="btn btn-secondary slider-button" to="/">Web</Link>
+                    <a href="https://netflix-clone-93b61.web.app/" className="btn btn-secondary slider-button mr-2" target="_blank" rel="noopener noreferrer">Web</a>
+                    <Link className="btn btn-primary slider-button" to="/project/netflix-clone">Description</Link>
                 </div>
             </div>
+            </>
+            }
             </div>
         </div>
             <a className="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">

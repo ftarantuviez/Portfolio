@@ -1,19 +1,23 @@
 import React from 'react'
 import CardProject from './Card'
 import './Styles.css'
-import iphone from '../../images/iphone.png'
-import mac from '../../images/mac.png'
 
-function ListOfCards(props) {
+
+function ListOfCards({projectsInfo, titleLevelProjects}) {
     return (
         <div className="container card-container">
-            <h4>{props.titleLevelProjects}</h4>
+            <h4>{titleLevelProjects}</h4>
             <div className="row listOfCards-row">
                 {
-                    [iphone, mac, iphone, mac, iphone, mac].map(card => (
-                        <div key={Math.random() * 100} className="col-sm-6 col-lg-4 col-12 card-col">
+                    projectsInfo.map(card => (
+                        <div key={card.title} className="col-sm-6 col-lg-4 col-12 card-col">
                             <CardProject 
-                                imag={card}
+                                imag={card.imagesDevices}    
+                                title={card.title}
+                                shortDescription={card.shortDescription}    
+                                subtitleCard={card.subtitleCard}
+                                webLink={card.domain}    
+                                route={card.route}
                             />
                         </div>
                     ))

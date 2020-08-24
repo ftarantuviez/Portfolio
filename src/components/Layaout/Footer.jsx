@@ -14,7 +14,7 @@ function Footer() {
                 <a href="https://twitter.com/ftarantuviez" target="_blank" className="footer__iconCercle t"><Icon icon={twitter} /></a>
                 <a href="https://linkedin/in/francisco-tarantuviez-54a2881ab/" target="_blank" className="footer__iconCercle l"><Icon icon={linkedin2} /></a>
                 <a href="https://github.com/ftarantuviez" target="_blank" className="footer__iconCercle g"><Icon icon={github} /></a>
-                <a href="" target="_blank" className="footer__iconCercle e"><Icon icon={ic_email} /></a>
+                <Link to="/contact" className="footer__iconCercle e"><Icon icon={ic_email} /></Link>
                 <a href="https://instagram.com/ftarantuviez" target="_blank" className="footer__iconCercle i"><Icon icon={instagram} /></a>
             </div>
             <div className="footer__index">

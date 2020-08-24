@@ -6,28 +6,53 @@ import {linkedin2} from 'react-icons-kit/icomoon/linkedin2'
 import {instagram} from 'react-icons-kit/fa/instagram'
 import {github} from 'react-icons-kit/fa/github'
 import {whatsapp} from 'react-icons-kit/icomoon/whatsapp'
+import { makeStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2'
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      display: 'flex',
+      '& > * + *': {
+        marginLeft: theme.spacing(2),
+      },
+    },
+  }));
 
 function Contact() {
+
+    const classes = useStyles();
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
-    const [finalValue, setFinalValue] = useState({
-        name: '',
-        email: '',
-        message: ''
-    })
+    const [loading, setLoading] = useState(false)
     
     const handleClick = (e) => {
         e.preventDefault();
+        setLoading(true)
 
-        setFinalValue({
-            name,
-            email,
-            message
-        })
-
-        console.log(finalValue)
+        emailjs.send('gmail', 'template_Qr4moiTC', { name: name, email: email, message: message}, 'user_yhl5f9DlpC6pkLHaSATbv' )
+            .then(res => {
+                Swal.fire({
+                    title: 'Email Successfully Sent',
+                    icon: 'success'
+                })
+                setLoading(false)
+                setMessage('')
+                setEmail('')
+                setName('')
+            })
+            .catch(err => {
+                Swal.fire({
+                  title: 'Email Failed to Send',
+                  icon: 'error'
+                })
+                console.error('Email Error:', err)
+                setLoading(false)
+              })
     }
 
     return (
@@ -38,7 +63,15 @@ function Contact() {
                 <input className="inputContact for" type="text" onChange={e => setName(e.target.value)} value={name} placeholder="Your name..." />
                 <input className="inputContact for" type="email" onChange={e => setEmail(e.target.value)} value={email} placeholder="Your email..." />
                 <textarea className="textAreaContact for" placeholder="Your message" onChange={e => setMessage(e.target.value)} value={message} />
-                <button className="buttonContact" type="submit" onClick={handleClick}>Send</button>
+                {
+                    loading 
+                    ? <div className={classes.root}>
+                        <CircularProgress />
+                      </div>
+                    :<button disabled={!email} className="buttonContact" type="submit" onClick={handleClick}>Send</button>
+
+                }
+                
             </form>
             <h3>Or we can talk by...</h3>
         </div>

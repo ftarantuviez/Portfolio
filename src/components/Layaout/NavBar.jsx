@@ -25,15 +25,9 @@ function NavBar() {
 
     useEffect(() =>{
         window.addEventListener('scroll', () => {
-            const value = window.scrollY;
-            if(window.location.pathname !== "/" && value > 50 && window.innerWidth > 768){
+            if(window.scrollY > 50 && window.innerWidth > 768){
                 setNavClassBackground('navbarSolidBackground')
-                setToggleLogo('block')
-                
-                
-            } else if(window.location.pathname === '/' && value > 1200 && window.innerWidth > 768){
-                setNavClassBackground('navbarSolidBackground')
-                setToggleLogo('block')
+                setToggleLogo('block')   
             } else{
                 setNavClassBackground('')
                 setToggleLogo('none')
@@ -42,7 +36,10 @@ function NavBar() {
         })
     }, [])
 
-
+    useEffect(() =>{
+        if(burgerMenuToggle) document.body.style.overflowY = 'hidden'
+        else document.body.style.overflowY = 'auto'
+    }, [burgerMenuToggle])
 
     return (
         <div className={`navbar ${navClassBackground}`}>

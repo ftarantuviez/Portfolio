@@ -7,13 +7,27 @@
 }
 .carouselInner-image{
     height: auto;
+    max-height: 100vh;
 }
 .carousel-caption{
     top: 40%;
 }
+
+.carousel-caption>h1{
+    font-size: 1.62rem;
+    margin-bottom: 15px;
+    color: #fc3c3c;
+    font-family: "Gill Sans","Gill Sans MT",Calibri,"Trebuchet MS",sans-serif;
+}
+
 .captionImage{
-    width: 120px;
-    margin-bottom: 10px;
+    width: 170px;
+    margin-bottom: 15px;
+    object-fit: contain;
+}
+.captionImage-instagram{
+    width: 95px;
+    margin-bottom: 15px;
     object-fit: contain;
 }
 .btn-primary
